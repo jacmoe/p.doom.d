@@ -118,24 +118,12 @@
         
     (setq boon-default-cursor-color "black"))
     
-  (define-key boon-command-map "L" 'forward-sentence)
-  (define-key boon-command-map "K" 'backward-sentence)
-  (define-key boon-command-map "s" 'prot/scroll-center-cursor-mode)
-  (define-key boon-command-map "n" 'org-narrow-to-subtree)
-  (define-key boon-command-map "N" 'widen)
-  (define-key boon-command-map "M" 'doom-modeline-mode)
-  (define-key boon-command-map "w" 'org-tracktable-status)
-  (define-key boon-command-map "æ" 'boon-smarter-forward)
-  (add-hook 'lexic-mode-hook 'turn-off-boon-mode)
   (add-hook 'ibuffer-hook 'turn-off-boon-mode)
   (add-hook 'doom-dashboard-mode 'turn-off-boon-mode)
-  (add-hook 'org-capture-mode-hook 'turn-off-boon-mode)
   :bind
   ("<f6>" . turn-on-boon-mode)
   ("<f7>" . turn-off-boon-mode)
-  ("C-;" . boon-set-command-state); used to quit insert mode
-  ("C-æ" . boon-set-command-state)); used to quit insert mode - Danish version
-  
+  ("C-;" . boon-set-command-state)); used to quit insert mode
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
