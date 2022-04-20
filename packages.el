@@ -8,3 +8,5 @@
 (package! catppuccin-theme)
 
 (package! atomic-chrome)
+
+(package! engine-mode)
