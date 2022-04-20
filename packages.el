@@ -59,3 +59,5 @@
 ;;    :recipe (:host github :repo "jacmoe/emacs-cmake-project"))
 
 (package! emacs-cmake-project :recipe (:local-repo "cmake-project"))
+
+(package! atomic-chrome)
