@@ -107,6 +107,7 @@
 ;; An Ergonomic Command Mode for Emacs
 ;; Run tutorial with M-x boon-tutorial
 (use-package! boon
+  :defer t
   :init
   (require 'boon-qwerty)
   (require 'boon-tutorial)
@@ -134,9 +135,9 @@
 ;; https://github.com/raxod502/ctrlf                                                ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package! ctrlf
-  :config
+  :defer t
+  :init
   (ctrlf-mode t))
-  
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
@@ -145,8 +146,9 @@
 ;; http://www.nongnu.org/geiser/                                                    ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (use-package! geiser
- :config
- (setq geiser-active-implementations '(racket)))
+  :defer t
+  :init
+  (setq geiser-active-implementations '(racket)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;

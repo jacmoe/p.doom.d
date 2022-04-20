@@ -54,3 +54,8 @@
 (package! ctrlf)
 
 (package! catppuccin-theme)
+
+;; (package! emacs-cmake-project
+;;    :recipe (:host github :repo "jacmoe/emacs-cmake-project"))
+
+(package! emacs-cmake-project :recipe (:local-repo "cmake-project"))
