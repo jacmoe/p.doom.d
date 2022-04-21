@@ -4,7 +4,7 @@
 ;; Variables                                                                        ;;
 ;;                                                                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defvar my-dark-theme 'catppuccin)    ; catppuccin, misterioso, uwu
+(defvar my-dark-theme 'misterioso)    ; catppuccin, misterioso, uwu
 (defvar my-light-theme 'tsdh-light)
 (defvar my-main-theme my-dark-theme)
 (defvar my-theme-shade "dark") ; can be light or dark. Used to color the Boon-mode cursor
@@ -67,7 +67,6 @@
   
 
 ;; Misc settings
-;; (setq display-line-numbers-type nil)                        ; Do not show line numbers
 (display-time-mode 1)                                       ; Display time in modeline
 (fringe-mode '(80 . 80))                                    ; Show vertical fringes
 (blink-cursor-mode t)                                       ; The cursor should blink
