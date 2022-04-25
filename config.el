@@ -123,6 +123,8 @@
         
     (setq boon-default-cursor-color "black"))
     
+  (define-key boon-command-map "S" 'lsp-treemacs-symbols)
+
   (add-hook 'ibuffer-hook 'turn-off-boon-mode)
   (add-hook 'geiser-repl-mode-hook 'turn-off-boon-mode)
   (add-hook 'doom-dashboard-mode 'turn-off-boon-mode)
