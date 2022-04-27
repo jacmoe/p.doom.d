@@ -12,3 +12,7 @@
 (package! engine-mode)
 
 (package! dap-mode)
+
+(package! tree-sitter)
+
+(package! tree-sitter-langs)
