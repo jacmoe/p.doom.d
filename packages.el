@@ -16,3 +16,5 @@
 (package! tree-sitter)
 
 (package! tree-sitter-langs)
+
+(package! exec-path-from-shell)
