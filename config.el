@@ -88,6 +88,8 @@
 (map!"C-<right>" #'shrink-window-horizontally)
 (map! "C-`" #'diff-buffer-with-file) ; view what is modified
 (map! "C-c t d" #'switch-theme) ; switch theme light/dark
+(map! "C-ø" #'open-line); remapping open-line, Danish version
+(map! "C-;" #'open-line); remapping open-line
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
@@ -115,7 +117,8 @@
 (use-package! boon
   :defer t
   :init
-  (require 'boon-qwerty)
+  ;; (require 'boon-qwerty)
+  (require 'boon-colemak)
   (require 'boon-tutorial)
   :config
   (boon-mode)
@@ -134,7 +137,8 @@
   :bind
   ("<f6>" . turn-on-boon-mode)
   ("<f7>" . turn-off-boon-mode)
-  ("C-;" . boon-set-command-state)); used to quit insert mode
+  ("C-o" . boon-set-command-state)); used to quit insert mode
+  ;; ("C-;" . boon-set-command-state)); used to quit insert mode
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
