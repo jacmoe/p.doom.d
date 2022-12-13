@@ -1,8 +1,6 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; $DOOMDIR/packages.el
 
-(package! straight :pin "3eca39d")
-
 (package! boon)
 
 (package! ctrlf)
@@ -20,3 +18,5 @@
 (package! tree-sitter-langs)
 
 (package! exec-path-from-shell)
+
+(package! nov)

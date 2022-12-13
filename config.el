@@ -90,6 +90,8 @@
 (map! "C-c t d" #'switch-theme) ; switch theme light/dark
 (map! "C-ø" #'open-line); remapping open-line, Danish version
 (map! "C-;" #'open-line); remapping open-line
+(map! "C-c C-k" #'cider-eval-file)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
@@ -104,6 +106,7 @@
 ;; Lsp-mode
 ;; Zig-mode
 ;; exec-path-from-shell
+;; Nov.el
 ;; Miscellaneous
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -222,6 +225,17 @@
   :init
   (when (memq window-system '(mac ns x))
    (exec-path-from-shell-initialize)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                                                  ;;
+;; Nov.el                                                                           ;;
+;;                                                                                  ;;
+;; https://depp.brause.cc/nov.el/                                                   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package! nov
+  :defer t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
