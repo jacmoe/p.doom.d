@@ -61,9 +61,7 @@
 ;; Setting initial size and position of frame
 ;; It is a necessary hack because Doom doesn't seem to
 ;; care about my frame size when restoring sessions ...
-(if (eq system-type 'windows-nt)
-    (setq initial-frame-alist '((top . 38) (left . 66) (width . 124) (height . 32)))
-  (setq initial-frame-alist '((top . 38) (left . 76) (width . 130) (height . 38))))
+(setq initial-frame-alist '((top . 38) (left . 36) (width . 110) (height . 38)))
   
 
 ;; Misc settings
