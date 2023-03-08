@@ -48,7 +48,7 @@
 (setq +doom-dashboard-menu-sections (cl-subseq +doom-dashboard-menu-sections 0 1))
 
 ;; Fonts - ordinary and variable pitch
-(setq doom-font (font-spec :family "Overpass Mono" :size 20)
+(setq doom-font (font-spec :family "Overpass Mono" :size 24)
       doom-variable-pitch-font (font-spec :family "Overpass" :size 28))
 
 ;; Theme
@@ -127,28 +127,22 @@
 (use-package! boon
   :defer t
   :init
-  ;; (require 'boon-qwerty)
-  (require 'boon-colemak)
+  (require 'boon-colemak-hnei)
   (require 'boon-tutorial)
   :config
   (boon-mode)
-  (setq boon-insert-cursor-color "orange")
-  (if (equal my-theme-shade "dark")
-      (progn
-        (setq boon-default-cursor-color "white"))
-        
-    (setq boon-default-cursor-color "black"))
-    
+
   (define-key boon-command-map "S" 'lsp-ui-imenu)
 
   (add-hook 'ibuffer-hook 'turn-off-boon-mode)
   (add-hook 'geiser-repl-mode-hook 'turn-off-boon-mode)
-  (add-hook 'doom-dashboard-mode 'turn-off-boon-mode)
-  :bind
-  ("<f6>" . turn-on-boon-mode)
-  ("<f7>" . turn-off-boon-mode)
-  ("C-o" . boon-set-command-state)); used to quit insert mode
-  ;; ("C-;" . boon-set-command-state)); used to quit insert mode
+  (add-hook 'doom-dashboard-mode 'turn-off-boon-mode))
+
+(after! boon
+  (map! "<f6>" #'turn-on-boon-mode)
+  (map! "<f7>" #'turn-off-boon-mode)
+  (map! "C-o" #'boon-set-command-state)); used to quit insert mode
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
