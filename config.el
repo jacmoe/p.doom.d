@@ -58,21 +58,6 @@
 (custom-set-faces!
   '(doom-modeline-buffer-modified :foreground "orange"))
 
-;; Setting initial initial size and position of frame
-;; "base-factor" is fraction of screen estate, ie '0.88' is 88 %
-;; (from https://www.reddit.com/r/emacs/comments/9c0a4d/tip_setting_initial_frame_size_and_position )
-(defun my/set-initial-frame ()
-  (let* ((base-factor 0.88)
-         (a-width (* (display-pixel-width) base-factor))
-         (a-height (* (display-pixel-height) base-factor))
-         (a-left (truncate (/ (- (display-pixel-width) a-width) 2)))
-         (a-top (truncate (/ (- (display-pixel-height) a-height) 2))))
-    (set-frame-position (selected-frame) a-left a-top)
-    (set-frame-size (selected-frame) (truncate a-width)  (truncate a-height) t)))
-
-(setq frame-resize-pixelwise t)
-
-(my/set-initial-frame)
 
 ;; Misc settings
 (display-time-mode 1)                                       ; Display time in modeline
@@ -135,6 +120,7 @@
   (define-key boon-command-map "S" 'lsp-ui-imenu)
 
   (add-hook 'ibuffer-hook 'turn-off-boon-mode)
+  (add-hook 'term-hook 'turn-off-boon-mode)
   (add-hook 'geiser-repl-mode-hook 'turn-off-boon-mode)
   (add-hook 'doom-dashboard-mode 'turn-off-boon-mode))
 
