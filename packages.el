@@ -20,3 +20,5 @@
 (package! exec-path-from-shell)
 
 (package! nov)
+
+(package! odin-mode :recipe (:local-repo "odin-mode"))
