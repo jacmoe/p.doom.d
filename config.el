@@ -211,10 +211,11 @@
 (use-package! odin-mode)
 ;; With odin-mode (https://github.com/mattt-b/odin-mode) and lsp-mode already added to your init.el of course!.
 (after! lsp-mode
-  (setq-default lsp-auto-guess-root t) ;; if you work with Projectile/project.el this will help find the ols.json file.
- (defvar lsp-language-id-configuration '((odin-mode . "odin")))
+ (setq-default lsp-auto-guess-root t) ;; if you work with Projectile/project.el this will help find the ols.json file.
+ (add-to-list 'lsp-language-id-configuration '(odin-mode . "odin"))
+
  (lsp-register-client
-  (make-lsp-client :new-connection (lsp-stdio-connection "/home/jacmoe/odin/ols/ols")
+  (make-lsp-client :new-connection (lsp-stdio-connection "/home/moena/odin/ols/ols")
                    :major-modes '(odin-mode)
                    :server-id 'ols
                    :multi-root t))) ;; This is just so lsp-mode sends the "workspaceFolders" param to the server.
