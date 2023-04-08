@@ -220,6 +220,9 @@
                    :server-id 'ols
                    :multi-root t))) ;; This is just so lsp-mode sends the "workspaceFolders" param to the server.
 (add-hook 'odin-mode-hook #'lsp)
+;; add error regex for odin inn compilation buffer
+(add-to-list 'compilation-error-regexp-alist-alist '(odin "\\([A-Za-z0-9\\._/-]+\\)(\\([0-9]+\\):\\([0-9]+\\)).*$" 1 2 3))
+(add-to-list 'compilation-error-regexp-alist 'odin)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                                                                  ;;
