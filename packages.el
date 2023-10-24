@@ -9,8 +9,6 @@
 
 (package! atomic-chrome)
 
-(package! engine-mode)
-
 (package! dap-mode)
 
 (package! tree-sitter)
